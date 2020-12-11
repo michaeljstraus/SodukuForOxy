@@ -11,6 +11,7 @@ def getLine():
             
     print(e)
     return e
-"""while goodLineFlag == False:
-    c = getLine(1)
-    goodLineFlag = checkLine(c)"""  
+if __name__ == '__main__':
+    while goodLineFlag == False:
+        c = getLine(1)
+        goodLineFlag = checkLine(c)

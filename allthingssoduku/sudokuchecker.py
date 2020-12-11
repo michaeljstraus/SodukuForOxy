@@ -9,10 +9,11 @@ def checkSoduku(o):
     GSf = checkGroupBox(o, GSf, 0)
     
     return GSf
-#GSf = True
-#GSf = checkSoduku(d)
-#print(GSf)
-"""n = []
+if __name__ == '__main__':
+    GSf = True
+    GSf = checkSoduku(d)
+    print(GSf)
+    n = []
     goodSodukuFlag = True
     b=0
     d=9
@@ -33,6 +34,6 @@ def checkSoduku(o):
         o.clear()
         goodSodukuFlag = False
         
-    """   
+  
 checkSoduku([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9,1, 2, 3, 4, 5, 6, 7, 8, 9])
  

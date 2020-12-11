@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
     
 #g = [1,2,3,'b',5,6,'s','x',9]
-#g = getLine()
+#g = getLine()    
 #print(type(g[0]))
 #g = getLine()
 #fillLine(g)

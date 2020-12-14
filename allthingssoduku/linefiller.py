@@ -20,7 +20,7 @@ def fillLine(l):
         print("Duplicate Number. Please try again.")
         stopFlag = True
     u = 0
-    while GLf == False and stopFlag == False:
+    while not GLf and not stopFlag:
         while u < 9:
             if type(l[u]) != type(u):
                 print("#", u+1, "is a string")

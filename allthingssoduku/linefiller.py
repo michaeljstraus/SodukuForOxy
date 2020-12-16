@@ -31,8 +31,7 @@ def fillLine(l):
                 u+=1
             elif u < len(l): u+=1
         GLf = checkLine(l)
-        if GLf == True:print(l)
-        if GLf == False:
+        if GLf:
             print(l)
             l = list(h)
             u = 0

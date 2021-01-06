@@ -1,16 +1,18 @@
 from linechecker import checkLine
 from lineinput import getLine
 from random import randint
+
+
 # from findgroups import findGroupBox, findGroupColumn, findGroupRow
 
 def fillLine(l):
-    GLf=False
+    GLf = False
     nullcount = 0
     for i in l:
         if i == 'null':
-            nullcount+=1
-        
-    if nullcount > 0: nullcount-=1
+            nullcount += 1
+
+    if nullcount > 0: nullcount -= 1
     stopFlag = False
     h = list(l)
     if len(l) != 9:
@@ -23,24 +25,30 @@ def fillLine(l):
     while not GLf and not stopFlag:
         while u < 9:
             if type(l[u]) != type(u):
-                print("#", u+1, "is a string")
+                # print("#", u + 1, "is a string")
                 l.remove(l[u])
-                z = randint(1,9)
-                print(z)
+                z = randint(1, 9)
+                # print(z)
                 l.insert(u, z)
-                u+=1
-            elif u < len(l): u+=1
+                u += 1
+            elif u < len(l):
+                u += 1
         GLf = checkLine(l)
-        if GLf:
+        if GLf == True:
+            pass
+            # print(l)
+        if GLf == False:
             print(l)
             l = list(h)
             u = 0
     return l
+
+
 if __name__ == '__main__':
-    l = getLine()
-    fillLine(l)
+    fillLine(['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'])
 
 # x, x, x, x, x, x, x, x, x
+# null = ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null']
 # fillLine([1,2,3,8,'null','null','null',4,9])
 # r = []
 # b=0

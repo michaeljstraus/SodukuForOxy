@@ -7,7 +7,7 @@ def checkLine(t):
     s = [1,2,3,4,5,6,7,8,9]
     if s == d:
         goodLineFlag = True
-        print("Good Line")
+        # print("Good Line")
     else:
         goodLineFlag = False
         print("Bad Line")

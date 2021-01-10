@@ -2,17 +2,17 @@ from sodukuinput import *
 from linechecker import *
 from lineinput import getLine
 from checkgroup import *
-def checkSudoku(sudoku):
+def checkSudoku(rows, columns, boxes):
 
-    for line in findGroupRow(sudoku):
+    for line in rows:
         if not checkLine(line):
             print('lines are bad')
             return False
-    for line in findGroupColumn(sudoku):
+    for line in columns:
         if not checkLine(line):
             print('columns are bad')
             return False
-    for line in findGroupBox(sudoku):
+    for line in boxes:
         if not checkLine(line):
             print('boxes are bad')
             return False

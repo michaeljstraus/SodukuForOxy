@@ -10,7 +10,7 @@ def checkLine(t):
         # print("Good Line")
     else:
         goodLineFlag = False
-        print("Bad Line")
+        #print("Bad Line")
     return goodLineFlag
 if __name__ == '__main__':
     pass

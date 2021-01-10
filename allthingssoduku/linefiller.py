@@ -1,6 +1,6 @@
 from linechecker import checkLine
 from lineinput import getLine
-from random import randint
+from random import choice
 
 
 # from findgroups import findGroupBox, findGroupColumn, findGroupRow
@@ -8,6 +8,8 @@ from random import randint
 def fillLine(l):
     GLf = False
     nullcount = 0
+    notInL = []
+    itierationCount=1
     for i in l:
         if i == 'null':
             nullcount += 1
@@ -22,12 +24,17 @@ def fillLine(l):
         print("Duplicate Number. Please try again.")
         stopFlag = True
     u = 0
+    for i in range(1, 10):
+        if i not in l:
+            notInL.append(i)
+
     while not GLf and not stopFlag:
         while u < 9:
             if type(l[u]) != type(u):
                 # print("#", u + 1, "is a string")
                 l.remove(l[u])
-                z = randint(1, 9)
+                z = choice(notInL)
+                notInL.remove(z)
                 # print(z)
                 l.insert(u, z)
                 u += 1
@@ -38,14 +45,20 @@ def fillLine(l):
             pass
             # print(l)
         if GLf == False:
-            print(l)
+            #print(l)
             l = list(h)
             u = 0
+            itierationCount+=1
+
     return l
+    # return itierationCount
 
 
 if __name__ == '__main__':
-    fillLine(['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'])
+    lst = []
+    for i in range(100):
+        lst.append(fillLine(['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null']))
+    print(lst)
 
 # x, x, x, x, x, x, x, x, x
 # null = ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null']

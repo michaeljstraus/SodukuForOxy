@@ -12,10 +12,17 @@ def inputSoduku():
 def display(sudoku):
     for line in range(9):
         for value in range(9):
+            if value % 3 == 0 and value != 0: print("| ", end='')
+            else:print(end=' ')
             if sudoku[line][value] == 'null':
-                print(end='   ')
-            else: print(sudoku[line][value], end='  ')
-        print()
+                print(end='  ')
+            else: print(sudoku[line][value], end=' ')
+        if line % 3 == 2 and line != 8:
+            print()
+            print("─"*29, end='')
+
+        print('\r')
+    print('\n'*3)
 if __name__ == '__main__':
     #w = inputSoduku()
     d = [[8, 2, 7, 1, 5, 4, 3, 'null', 6], [9, 6, 5, 3, 2, 7, 1, 4, 8], [3, 4, 1, 6, 8, 9, 7, 5, 2],
